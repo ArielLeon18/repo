@@ -8,6 +8,9 @@
         <link rel="stylesheet" href="../css/productos-listado.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/footer.css">
         <%- include('../partials/head'); %>
 
     </head>
@@ -15,366 +18,38 @@
     <body class="listado-body">
 
         <header>
-
             <%- include('../partials/header'); %>
-
         </header>
 
-        <!-- Inicio lista RECOMENDACIONES -->
 
-        <div id="productos">
-            <div class="lista-top">
-                <div class="titulo-top">
-                    <h2><strong>Productos Destacados</strong></h2>
+        <div class="container products-wrapper">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="products-title">Basado en tu última visita</h2>
                 </div>
-
-                <% for(let p of productos) { %>
-
-                <div class="productos-top">     
-                    <div class="producto1-top"> 
-                        <div class="img1-top">
-                        </div>
-                        <div class="texto1-top">
-                            <i class="bi bi-truck truck"></i>
-                            <br>
-                            <strong>$<%= p.price %></strong>
-                            <br>
-                            <LAbel style="color: #39b54a;"><%= p.discount %> % OFF</LAbel>
-                            <br>
-                            <br>
-                            <strong><%= p.name %></strong>
-                        </div>
-                    </div>
+                <!-- Show the "visited" products -->
+                <% for(let p of productos) { %> 
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <section class="product-box">
+                        <a href="/products/detalle/<%= p.id %>">
+                            <figure class="product-box_image">
+                                <img src="/images/productos/<%= p.image %>" alt="imagen de producto">
+                            </figure>
+                            <article class="product-box_data">
+                                <h2>$<%= p.price %></h2>
+                                <span><%= p.discount %> % OFF</span>
+                                <p><%= p.name %></p>
+                                <i class="fas fa-truck"></i>
+                            </article>
+                        </a>
+                    </section>
                 </div>
-                
                 <% } %> 
-
-            </div>
-            
-            <!-- Fin lista RECOMENDACIONES -->
-            
-            
-            <!-- Inicio lista TV -->
-
-            <div class="lista-tv">
-                <div class="titulo-tv">
-                    <br>
-                    <h2><strong>Televisores</strong></h2>
-                </div>
-                <div class="productos-tv">     
-                    <div class="producto1-tv"> 
-                        <div class="img1-tv">
-                        </div>
-                        <div class="texto1-tv">
-                            <i class="bi bi-truck truck"></i>
-                            <br>
-                            <strong>$80000</strong>
-                            <br>
-                            <LAbel style="color: #39b54a;">20% off</LAbel>
-                            <br>
-                            <br>
-                            <strong>TV Smart 4K 43" - Samsung</strong>
-                        </div>
-                    </div>
-                    <div class="producto2-tv"> 
-                        <div class="img2-tv">
-                        </div>
-                        <div class="texto2-tv">
-                            <i class="bi bi-truck truck"></i>
-                            <br>
-                            <strong>$150000</strong>
-                            <br>
-                            <LAbel style="color: #39b54a;">30% off</LAbel>
-                            <br>
-                            <br>
-                            <strong>TV Smart 4K 55" - PHILIPS</strong>
-                        </div>
-                    </div>
-                    <div class="producto3-tv"> 
-                        <div class="img3-tv">
-                        </div>
-                        <div class="texto3-top">
-                            <i class="bi bi-truck truck"></i>
-                            <br>
-                            <strong>$130000</strong>
-                            <br>
-                            <LAbel style="color: #39b54a;">30% off</LAbel>
-                            <br>
-                            <br>
-                            <strong>TV Smart 4K 50" - Samsung</strong>
-                        </div>
-                    </div>
-                    <div class="producto4-tv"> 
-                        <div class="img4-tv">
-                        </div>
-                        <div class="texto4-tv">
-                            <i class="bi bi-truck truck"></i>
-                            <br>
-                            <strong>$92000</strong>
-                            <br>
-                            <LAbel style="color: #39b54a;">20% off</LAbel>
-                            <br>
-                            <br>
-                            <strong>TV Smart 4K 43" - Xiaomi</strong>
-                        </div>
-                    </div>
-                    <!-- <div class="producto5-tv"> 
-                        <div class="img5-tv">
-                        </div>
-                        <div class="texto5-tv">
-                            Hola
-                            <br>
-                            hello
-                            <br>
-                            television
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-            <!-- Fin lista TV -->
-
-
-            <!-- Inicio lista AUDIO -->
-            <div class="audio">
-                <div class="titulo-audio">
-                    <br>
-                    <h2><strong>Auriculares</strong></h2>
-                </div>
-                <div class="productos-audio">     
-                    <div class="producto1-audio"> 
-                        <div class="img1-audio">
-                        </div>
-                        <div class="texto1-audio">
-                            <i class="bi bi-truck truck"></i>
-                            <br>
-                            <strong>$15000</strong>
-                            <br>
-                            <LAbel style="color: #39b54a;">25% off</LAbel>
-                            <br>
-                            <br>
-                            <strong>Auricular Gamer Led - EKSA</strong>
-                        </div>
-                    </div>
-                    <div class="producto2-audio"> 
-                        <div class="img2-audio">
-                        </div>
-                        <div class="texto2-audio">
-                            <i class="bi bi-truck truck"></i>
-                            <br>
-                            <strong>$10500</strong>
-                            <br>
-                            <LAbel style="color: #39b54a;">10% off</LAbel>
-                            <br>
-                            <br>
-                            <strong>Auricular Gamer - KOTION</strong>
-                        </div>
-                    </div>
-                    <div class="producto3-audio"> 
-                        <div class="img3-audio">
-                        </div>
-                        <div class="texto3-audio">
-                            <i class="bi bi-truck truck"></i>
-                            <br>
-                            <strong>$12000</strong>
-                            <br>
-                            <LAbel style="color: #39b54a;">20% off</LAbel>
-                            <br>
-                            <br>
-                            <strong>Auricular Gamer LED - KOTION</strong>
-                        </div>
-                    </div>
-                    <div class="producto4-audio"> 
-                        <div class="img4-audio">
-                        </div>
-                        <div class="texto4-audio">
-                            <i class="bi bi-truck truck"></i>
-                            <br>
-                            <strong>$6770</strong>
-                            <br>
-                            <LAbel style="color: #39b54a;">15% off</LAbel>
-                            <br>
-                            <br>
-                            <strong>Auricular Starter - Red Dragon</strong>
-                        </div>
-                    </div>
-                    <!-- <div class="producto5-audio"> 
-                        <div class="img5-audio">
-                        </div>
-                        <div class="texto5-top">
-                            Hola
-                            <br>
-                            hello
-                            <br>
-                            television
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-
-            <!-- Fin lista AUDIO -->
-
-
-            <!-- Inicio lista MIC -->
-            <div class="mic">
-                <div class="titulo-mic">
-                    <br>
-                    <h2><strong>Micrófonos</strong></h2>
-                </div>
-                <div class="productos-mic">     
-                    <div class="producto1-mic"> 
-                        <div class="img1-mic">
-                        </div>
-                        <div class="texto1-mic">
-                            <i class="bi bi-truck truck"></i>
-                            <br>
-                            <strong>$8500</strong>
-                            <br>
-                            <LAbel style="color: #39b54a;">15% off</LAbel>
-                            <br>
-                            <br>
-                            <strong>MIC Studio - Red Dragon</strong>
-                        </div>
-                    </div>
-                    <div class="producto2-mic"> 
-                        <div class="img2-mic">
-                        </div>
-                        <div class="texto2-mic">
-                            <i class="bi bi-truck truck"></i>
-                            <br>
-                            <strong>$12400</strong>
-                            <br>
-                            <LAbel style="color: #39b54a;">10% off</LAbel>
-                            <br>
-                            <br>
-                            <strong>LED MIC Professional - HyperX</strong>
-                        </div>
-                    </div>
-                    <div class="producto3-mic"> 
-                        <div class="img3-mic">
-                        </div>
-                        <div class="texto3-mic">
-                            <i class="bi bi-truck truck"></i>
-                            <br>
-                            <strong>$6000</strong>
-                            <br>
-                            <LAbel style="color: #39b54a;">5% off</LAbel>
-                            <br>
-                            <br>
-                            <strong>MIC Studio - HyperX</strong>
-                        </div>
-                    </div>
-                    <div class="producto4-mic"> 
-                        <div class="img4-mic">
-                        </div>
-                        <div class="texto4-mic">
-                            <i class="bi bi-truck truck"></i>
-                            <br>
-                            <strong>$8000</strong>
-                            <br>
-                            <LAbel style="color: #39b54a;">10% off</LAbel>
-                            <br>
-                            <br>
-                            <strong>MIC Gamer - Soul</strong>
-                        </div>
-                    </div>
-                    <!-- <div class="producto5-mic"> 
-                        <div class="img5-mic">
-                        </div>
-                        <div class="texto5-mic">
-                            Hola
-                            <br>
-                            hello
-                            <br>
-                            television
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-            <!-- Fin lista MIC -->
-
-
-            <!-- Inicio lista ILUMINACION -->
-            <div class="iluminacion">
-                <div class="titulo-iluminacion">
-                    <br>
-                    <h2><strong>Ilumunación</strong></h2>
-                </div>
-                <div class="productos-iluminacion">     
-                    <div class="producto1-iluminacion"> 
-                        <div class="img1-iluminacion">
-                        </div>
-                        <div class="texto1-iluminacion">
-                            <i class="bi bi-truck truck"></i>
-                            <br>
-                            <strong>$10500</strong>
-                            <br>
-                            <LAbel style="color: #39b54a;">20% off</LAbel>
-                            <br>
-                            <br>
-                            <strong>Aro de luz LED (con trípode) - Neewer </strong>
-                        </div>
-                    </div>
-                    <div class="producto2-iluminacion"> 
-                        <div class="img2-iluminacion">
-                        </div>
-                        <div class="texto2-iluminacion">
-                            <i class="bi bi-truck truck"></i>
-                            <br>
-                            <strong>$6500</strong>
-                            <br>
-                            <LAbel style="color: #39b54a;">10% off</LAbel>
-                            <br>
-                            <br>
-                            <strong>Tira LED - WIZ (x10 mts)</strong>
-                        </div>
-                    </div>
-                    <div class="producto3-iluminacion"> 
-                        <div class="img3-iluminacion">
-                        </div>
-                        <div class="texto3-iluminacion">
-                            <i class="bi bi-truck truck"></i>
-                            <br>
-                            <strong>$10000</strong>
-                            <br>
-                            <LAbel style="color: #39b54a;">5% off</LAbel>
-                            <br>
-                            <br>
-                            <strong>Barra LED Inalámbrica - PHILIPS</strong>
-                        </div>
-                    </div>
-                    <div class="producto4-iluminacion"> 
-                        <div class="img4-iluminacion">
-                        </div>
-                        <div class="texto4-iluminacion">
-                            <i class="bi bi-truck truck"></i>
-                            <br>
-                            <strong>$14000</strong>
-                            <br>
-                            <LAbel style="color: #39b54a;">10% off</LAbel>
-                            <br>
-                            <br>
-                            <strong>LED Wiz - Inteligente (x4)</strong>
-                        </div>
-                    </div>
-                    <!-- <div class="producto5-iluminacion"> 
-                        <div class="img5-iluminacion">
-                        </div>
-                        <div class="texto5-iluminacion">
-                            Hola
-                            <br>
-                            hello
-                            <br>
-                            television
-                        </div>
-                    </div> -->
-                </div>
             </div>
         </div>
-
+            
         <footer>
-
             <%- include('../partials/footer'); %>
-
         </footer>
 
     </body>

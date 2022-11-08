@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 
-   <head>
 
-         <%- include('../partials/head'); %>
-    
-   </head>
+    <head>
+        <%- include('../partials/head'); %>
+        <!-- Crear -->
+        <link rel="stylesheet" href="../css/crear.css">
+    </head>
 
    <body>
 
@@ -21,17 +22,22 @@
 
                 <div class="col-sm-12 col-md-6 ">
          
-                        <img id="imgprincipal" src="../images/productos/microfono-gaming-5d5ec2fd0b665.jpg" > 
+                        <img id="imgprincipal" src="/images/productos/<%= producto.image %>" > 
                  
                 </div>
                 <div class="col-sm-12 col-md-6 templatemo_col12">
-                    <span>Microfono Condensador Microsoft</span>
-                    <span>50 $US</span>
+                    <span>nombre: <%= producto.name %></span>
+                    <span>precio: <%= producto.price%></span>
+                    <a href="/products/editar/<%= producto.id %>"> EDITAAAAAR</a>
+                    <br>
 
+                    <form action="/products/<%= producto.id %>?_method=DELETE" method="POST">
+                        <button type="submit" >ELIMINAR</button>
+                    </form>
                 </div>
         
         
-        </div>
+        </div>  
         
              <!--imagen  Principal  del producto end-->
         <div class="clear"></div>

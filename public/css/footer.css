@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+.footer-logo{
+    display: none;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    height: 70px;
+    background-color: black;
+}
+
+.footer-box1{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    color: white;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    height: 55px;
+}
+
+.footer-redes{
+    font-size: 15px;
+    width: 30vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer-box2{
+    background-color: rgba(60, 60, 60, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    color: white;
+    padding: 5px;
+    height: 25px;
+}
+
+.footer-news{
+    display: none;
+}
+
+.derechos{
+    font-size: 10px;
+}
+
+@media (min-width:480px){
+    .footer-logo{
+        display: block;
+        height: 80px;
+    }
+    
+    footer{
+        display: flex;
+        flex-direction: column;
+        height: 120px;
+        background-color: black;
+    }
+    
+    .footer-box1{
+        height: 85px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px;
+        color: white;
+        margin-right: 2vw;
+        margin-left: 2vw;
+    }
+    
+    .footer-redes{
+        font-size: 28px;
+        width: 30vw;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .footer-box2{
+        height: 35px;
+        background-color: rgba(60, 60, 60, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        color: white;
+        padding: 10px;
+    }
+
+    .footer-news{
+        display: none;
+    }
+
+    .derechos{
+        font-size: 12px;
+    }
+}
+
+
+@media (min-width:768px){
+    @media (min-width:480px){
+        .footer-logo{
+            height: 80px;
+        }
+        
+        footer{
+            display: flex;
+            flex-direction: column;
+            height: 230px;
+            background-color: black;
+            box-sizing: border-box;
+        }
+        
+        .footer-box1{
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 15px;
+            color: white;
+            margin-left: 10vw;
+            margin-right: 10vw;
+        }
+        
+        .footer-redes{
+            font-size: 30px;
+            width: 30vw;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        
+        .footer-box2{
+            height: 40px;
+            background-color: rgba(60, 60, 60, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+            color: white;
+            padding: 10px;
+        }
+
+        .footer-news{
+            display: block;
+            color: white;
+            padding: 10px;
+            margin-left: 10vw;
+            margin-right: 10vw;
+            background-color: black;
+            border-bottom: 1px solid white;
+        }
+
+        .newsletter-mail{
+            width: 70vw;
+            margin: 15px;
+            height: 30px;
+        }
+
+        .derechos{
+            font-size: 15px;
+        }
+    }
+
+}
+
+@media (min-width:1024px){
+    .footer-logo{
+        height: 100px;
+        width: 200px;
+    }
+            
+    footer{
+        display: flex;
+        flex-direction: column;
+        height: 280px;
+        background-color: black;
+        box-sizing: border-box;
+    }
+            
+    .footer-box1{
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 20px;
+        color: white;
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+            
+    .footer-redes{
+        font-size: 40px;
+        width: 30vw;
+        display: flex;
+        justify-content: space-evenly;
+    }
+            
+    .footer-box2{
+        height: 60px;
+        background-color: rgba(60, 60, 60, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        color: white;
+        padding: 5px;
+        margin-bottom: 0;
+    }
+
+    .footer-news{
+        display: block;
+        color: white;
+        padding-top: 20px;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        background-color: black;
+        border-bottom: 1px solid white;
+    }
+
+    .newsletter-mail{
+        width: 60vw;
+        margin: 15px;
+        height: 30px;
+    }
+
+    .derechos{
+        font-size: 15px;
+    }
+}

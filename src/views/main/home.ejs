@@ -2,6 +2,13 @@
 <html>
    <head>
          <%- include('../partials/head'); %>
+
+         <link rel="stylesheet" href="../css/header.css">
+
+         <link rel="stylesheet" href="../css/footer.css">
+
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
    </head>
 
    <body>
@@ -49,7 +56,6 @@
                     <div class="productosCuatroColumnas">
                         
                         <% for(let p of productos) { %>
-
                         <div class="producto">
                             
                             <img class="imgProducto"  src="./images/productos/<%= p.image %>" alt="">
@@ -59,9 +65,7 @@
                             <div class="nombreProducto">
                                 <span><%= p.name %></span>
                             </div>
-
                         </div>
-
                         <% } %>    
                         
                     </div>

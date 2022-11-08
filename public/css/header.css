@@ -1,0 +1,299 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo{
+    height: 50px;
+    width: 100px;
+}
+header{
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 55px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+
+.box1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon-menu-bar{
+    color: white;
+    float: right;
+    font-size: 28px;
+    margin: 6px 0;
+}
+
+#menu-bar{
+    display: none; 
+}
+
+.buscador{
+    width: 40vw;
+}
+
+.box-logo-carrito{
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.9;
+    transition: all 0.5s;
+    transform: translateX(-100%);
+}
+
+.box-logo-carrito a{
+    font-size: 15px;
+    display: block;
+    color: white;
+    height: 50px;
+    text-decoration: none;
+    padding: 15px;
+    border-bottom: 1px solid white;
+}
+
+.box-logo-carrito a:hover{
+    background-color: white;
+    opacity: 0.3;
+    color: black;
+}
+
+
+#menu-bar:checked ~ .box-logo-carrito{
+    transform: translateX(0%);
+}
+
+.box2{
+    display: none;
+}
+
+.box1-log{
+    display: none;
+}
+.box1-carrito{
+    display: none;
+}
+
+
+
+
+
+@media (min-width:480px){
+
+    
+.logo{
+    height: 80px;
+    width: 160px;
+}
+header{
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+
+.box1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon-menu-bar{
+    color: white;
+    float: right;
+    font-size: 28px;
+    margin: 6px 0;
+}
+
+#menu-bar{
+    display: none; 
+}
+
+.buscador{
+    width: 40vw;
+}
+
+.box-logo-carrito{
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.8;
+    transition: all 0.5s;
+    transform: translateX(-100%);
+}
+
+.box-logo-carrito a{
+    display: block;
+    color: white;
+    font-size: 15px;
+    height: 50px;
+    text-decoration: none;
+    padding: 15px;
+    border-bottom: 1px solid white;
+}
+
+.box-logo-carrito a:hover{
+    background-color: white;
+    opacity: 0.3;
+    color: black;
+}
+
+
+#menu-bar:checked ~ .box-logo-carrito{
+    transform: translateX(0%);
+}
+
+.box2{
+    display: none;
+}
+
+.box1-log{
+    display: none;
+}
+.box1-carrito{
+    display: none;
+}
+}
+
+
+
+
+
+
+@media (min-width:768px){
+
+    header{
+        height: 130px;
+        position: static;
+    }
+
+    .box1{
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+
+    .box1 a{
+        display: block;
+        text-decoration: none;
+        color: white;
+        font-size: 15px;
+    }
+    .logo{
+        height: 80px;
+        width: 160px;
+    }
+
+    .box-logo-carrito{
+        display: none;
+    }
+
+    .buscador{
+        width: 40vw;
+        height: 30px;
+        display: flex;
+    }
+    .icon-menu-bar{
+        display: none;
+    }
+
+
+    .box2{
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        background-color: rgba(60, 60, 60, 0.5);
+    }
+
+    .box2 a{
+        text-decoration: none;
+        color: white;
+        font-size: 15px;
+        display: block;
+        padding: 12px;
+    }
+} 
+
+
+@media (min-width:1024px){
+
+    header{
+        height: 170px;
+        position: static;
+
+    }
+
+    .logo{
+        height: 120px;
+        width: 240px;
+    }
+
+    .box1{
+        height: 120px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+
+    .box1 a{
+        display: block;
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+    }
+
+    .box-logo-carrito{
+        display: none;
+    }
+
+    .buscador{
+        width: 40vw;
+        height: 35px;
+        display: flex;
+    }
+
+    .box2{
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        background-color: rgba(60, 60, 60, 0.5);
+    }
+
+    .box2 a{
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        display: block;
+        padding: 15px;
+    }
+}

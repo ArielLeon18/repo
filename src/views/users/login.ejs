@@ -1,45 +1,52 @@
 <!DOCTYPE html>
-
 <html lang="en">
-        
     <head>
-
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/style.css">
-        <%- include('../partials/head'); %>
-
-    </head>
-
-    <body class="fondo">
-
-        <header>
-
-            <%- include('../partials/header'); %>
-            
-        </header>
-
-        <div class= "main-login-registro">
-
-            <form class="form-registro">
-                <h4>Login</h4>    
-                <input class="casilla" type="email" name="email" id="email" placeholder="Correo electrónico">
-                <input class="casilla" type="password" name="password" id="password" placeholder="Contraseña">
-                <div class="cont-botón">
-                    <input class="botón" type="submit" value="Iniciar Sesión">
-                    <a class="botón" href="/users/registro"><input type="submit" value="Registrarme"></a>
-                </div>
-            </form>
-
-        </div>
-
-        <footer>
-
-            <%- include('../partials/footer'); %>
-
-        </footer>
-
-    </body>
     
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <title>StreamHouse</title>
+
+
+        <link rel="stylesheet" href="../css/header.css">
+
+        <link rel="stylesheet" href="../css/footer.css">
+
+        <link rel="stylesheet" href="../css/login.css">
+    </head>
+<body>
+
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+
+    <main>
+        <div class="box-login">
+
+            <div class="box-login-datos">
+                <label for="" class="login-titulo">ACCESO USUARIOS</label>
+                <br>
+                <label for="">Correo electrónico *</label> 
+                <input type="text" name="" id="Correo" class="login-text" placeholder="ejemplo@email.com">
+                <br>
+                <label for="">Contraseña *</label>
+                <input type="text" id="contra" class="login-text" placeholder="">
+                <label for="recuperar-contraseña">¿Olvidaste tu contraseña?</label>
+                <button type="submit" id="recuperar-contraseña">olvide mi contraseña</button>
+            </div>
+            
+            <div class="box-login-botones">
+                <button type="submit" id="login-ingresar" class="btn btn-primary">Ingresar</button>
+                <button type="submit" id="login-registrarme" class="btn btn-info">Registrarme</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+    
+</body>
 </html>

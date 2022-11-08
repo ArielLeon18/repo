@@ -9,7 +9,7 @@
   "image": "laptop-gamer-5bdcd4f039150.jpg"
  },
  {
-  "id": 2,
+  "id": 3,
   "name": "Monitor 14",
   "price": 22500,
   "discount": 3,
@@ -18,12 +18,21 @@
   "image": "monitor-gamer-5bdcd3a987148.jpg"
  },
  {
-  "id": 3,
-  "name": "Computador Core i5 11va Generación",
-  "price": 150000,
-  "discount": 6,
-  "category": "in-sale",
+  "id": 4,
+  "name": "",
+  "price": null,
+  "discount": null,
+  "category": "",
   "description": "",
-  "image": "ordenador-gamer-5bdcd50468f13.jpg"
+  "image": "qqq.jpg"
+ },
+ {
+  "id": 5,
+  "name": "",
+  "price": null,
+  "discount": null,
+  "category": "",
+  "description": "",
+  "image": "qqq.jpg"
  }
 ]

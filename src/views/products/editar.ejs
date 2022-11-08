@@ -12,7 +12,7 @@
         
         <header>
 
-            <%- include('../partials/header'); %>  
+            <%- include('../partials/header'); %>
 
         </header>
         
@@ -20,18 +20,18 @@
 
             <div class= "divCrear">
 
-                <form class="formCrear" action="resultado.html" method="POST">
+                <form class="formCrear" action="editar?_method=PUT" method="POST">
                     <h4>Editar producto</h4>
-                    <input class="casilla" type="text" name="nombres" id="nombres" placeholder="Nombre del producto:">    
-                    <input class="casilla" type="text" name="apellidos" id="apellidos" placeholder="Precio:">
-                    <input class="casilla" type="number" name="number" id="number" placeholder="Descuento:">
-                    <select class="casilla" type="text" name="text" id="text" placeholder="Categoría:">
+                    <input class="casilla" type="text" name="nombres" value="<%= producto.name%>" id="nombres" placeholder="Nombre del producto:">    
+                    <input class="casilla" type="text" name="apellidos" value="<%= producto.price%>" id="apellidos" placeholder="Precio:">
+                    <input class="casilla" type="number" name="number" value="<%= producto.discount%>" id="number" placeholder="Descuento:">
+                    <select class="casilla" type="text" name="category id="text" placeholder="Categoría:">
                         <option value="">Elegí</option>
                         <option value="in-sale">En oferta</option>
                         <option value="visited">Ultimos agregados</option>
                     </select>
-                    <input class="casilla" type="text" name="text" id="text" placeholder="Descripción:">
-                    <input type="file" name="image" id="image">
+                    <input class="casilla" type="text" name="text" value="<%= producto.description%>" id="text" placeholder="Descripción:">
+                    <!-- <input type="file" name="image" id="image"> -->
                     <br>
                     <button class="casilla" type="submit">Editar</button>
                 </form>

@@ -5,7 +5,12 @@
 .divCrear{
     display: flex;
     background-color: #21232A;
-    height: 75vh;
+    height: 100vh;
+}
+
+h4{
+    padding-bottom: 30px;
+    padding-top: 20px;
 }
 
 .formCrear {
@@ -15,87 +20,197 @@
     background-color: black;
     justify-content: center;
     align-items: center;
-    width: 20vw;
+    width: 100vw;
     padding: 2vw;
-    margin: auto;
-    padding-top: 2.5vw;
+    margin-top: 55px;
     color: white;
 }
 
-@media (max-width:520px) {
+.crear-botones{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
 
-    header{
-        display: none;
+.crear-botones button{
+    display: block;
+    padding: 10px;
+    font-size: 15px;
+    margin-top: 40px;
+    width: 45vw;
+    border-radius: px;
+}
+
+#crear-areatexto{
+    display: none;
+}
+
+
+@media (min-width:480px) {
+
+    .divCrear{
+        display: flex;
+        background-color: #21232A;
+        height: 100vh;
     }
-    footer{
+    
+    .formCrear label{
+        font-size: 25px;
+        padding-bottom: 30px;
+        padding-top: 20px;
+    }
+    
+    .formCrear {
+        text-align: center;
+        border: 3px solid #2BE0A4;
+        border-radius: 4px;
+        background-color: black;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        padding: 2vw;
+        margin-top: 80px;
+        color: white;
+        font-size: 15px;
+    }
+    
+    .crear-botones{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 1vw;
+        margin-right: 1vw;
+    }
+    
+    .crear-botones button{
+        display: block;
+        padding: 10px;
+        font-size: 15px;
+        margin-top: 40px;
+        width: 45vw;
+        border-radius: px;
+    }
+
+    #crear-areatexto{
         display: none;
     }
     
-}
-@media (min-width:575px) {
-
-    .barraPreSlider{
-       margin-top: 65PX;
-    }
-    #hamburguer{
-        width: 100%;
-    }
-    .productosUnaColumna{
-        margin-top:300px;
-        
-    }
-    .menuSlider li a{
-        top: 250px;
-    }
+    
 }
 
 @media (min-width:768px) {
 
-    .barraPreSlider {
-        margin-top: 80px;
-    }
-    .menuSlider li a{
-        top: 350px;
-    }
-    .productosUnaColumna{
-        margin-top:400px;
-        
-    }
-}
-@media (min-width:1024px) {
-
-    .containerSlider{
-        width: 50%;
-    }
-    .barraPreSlider {
-        margin-top: -19px;
-    }
-    .menuSlider li a{
-        top: 300px;
-    }
-    .productosUnaColumna{
-        margin-top:350px;
-        
-    }
-    #hamburguer{
-        font-size: x-large;
-    }
-    .logoFooter {
-        width: 20%;
-        padding: 5px;
-    }
-    .redes{
-        width: 90%;;
-    }
-
-    .telefono{
-        font-size: large;
-        width: 100%;
-    }
-    .main-header {
-        position: static;
+    .divCrear{
+        display: flex;
+        background-color: #21232A;
+        height: 100vh;
     }
     
+   
+    
+    .formCrear {
+        text-align: center;
+        border: 3px solid #2BE0A4;
+        border-radius: 4px;
+        background-color: black;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        padding: 2vw;
+        margin-top: 0px;
+        color: white;
+        font-size: 15px;
+    }
+
+    .formCrear label{
+        font-size: 25px;
+        padding-bottom: 30px;
+        padding-top: 20px;
+    }
+    
+    .crear-botones{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 1vw;
+        margin-right: 1vw;
+    }
+    
+    .crear-botones button{
+        display: block;
+        padding: 10px;
+        font-size: 20px;
+        margin-top: 40px;
+        width: 45vw;
+        border-radius: px;
+    }
+
+    #textdescripcion{
+        display: none;
+    }
+    #crear-areatexto{
+        display: block;
+        width: 100%;
+        font-size: 20px;
+        height: 90px;
+    }
+}
+
+
+@media (min-width:1024px) {
+
+    .divCrear{
+        display: flex;
+        background-color: #21232A;
+        height: 100vh;
+    }
+    
+   
+    
+    .formCrear {
+        text-align: center;
+        border: 3px solid #2BE0A4;
+        border-radius: 4px;
+        background-color: black;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        padding: 2vw;
+        margin-top: 0px;
+        color: white;
+        font-size: 15px;
+    }
+
+    .formCrear label{
+        font-size: 30px;
+        padding-bottom: 30px;
+        padding-top: 20px;
+    }
+    
+    .crear-botones{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 1vw;
+        margin-right: 1vw;
+    }
+    
+    .crear-botones button{
+        display: block;
+        padding: 10px;
+        font-size: 20px;
+        margin-top: 40px;
+        width: 45vw;
+        border-radius: px;
+    }
+
+    #textdescripcion{
+        display: none;
+    }
+    #crear-areatexto{
+        display: block;
+        width: 100%;
+        font-size: 20px;
+        height: 120px;
+    }
 }
 
 /* FIN CREAR PRODUCTO */

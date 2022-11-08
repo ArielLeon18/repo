@@ -20,17 +20,32 @@ const uploadFile = multer({ storage: multerDiskStorage });
 
 //Rutas
 
-router.get("/carrito", controladorProductos.carrito)
-
-router.get("/crear", controladorProductos.crear)
-router.post("/crear",uploadFile.single('newimage'), controladorProductos.almacenar)
-
-router.get("/detalle", controladorProductos.detalle)
-
-router.get("/editar", controladorProductos.editar)
-
+//MUESTRA LA VISTA DE TODOS LOS PRODUCTOS
 router.get("/", controladorProductos.listado)
 
-//Exportar
+//CREAR UN PRODUCTO
+router.get('/crear', controladorProductos.crear)
+router.post("/crear",controladorProductos.almacenar)   //,uploadFile.single('newimage'),
 
+// VER UN PRODUCTO
+router.get("/detalle/:id", controladorProductos.detalle)
+
+// EDITAR UN PRODUCTO
+router.get("/editar/:id", controladorProductos.editar)
+router.put('/editar/:id', controladorProductos.actualizar); ///////////////////////////////////
+
+// ELIMINAR PRODUCTO
+
+router.delete('/:id' , controladorProductos.borrar)
+
+// PRODUCTOS SELECCIONADOS
+router.get("/carrito", controladorProductos.carrito)
+
+
+
+// ELIMINAR UN PRODUCTO
+// // // // // // // // // // router.delete('/:id', productsController.destroy); 
+
+
+//Exportar
 module.exports = router;
